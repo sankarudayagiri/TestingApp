@@ -8,31 +8,13 @@ import * as interact from 'interactjs';
   styleUrls: ['./new.component.css']
 })
 export class NewComponent implements OnInit {
-
+  someValue:any="sankar";
   constructor() { }
 
   ngOnInit() {
-    // var movable = document.querySelector('#movable-box');
-
-
-    // interact(movable)
-    //   .draggable({
-    //     allowFrom: '.drag-handle',
-    //     onmove: function (event) {
-          
-    //     }
-    //   })
-    //   .resizable({
-    //     allowFrom: '.resize-handle',
-    //     onmove: function (event) {
-          
-    //     }
-    //   })
-    //   .pointerEvents({
-    //     allowFrom: '',
-    //   });;
-    
-
+    setTimeout(() => {
+      this.someValue="narayana";
+    },2000);    
   }
 
 }

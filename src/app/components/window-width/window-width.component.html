@@ -1,0 +1,19 @@
+<div style="border:1px solid red" [style.width]="someWidth+'%'">
+  <p style="border: 1px solid blue"[style.width]=" renWidth " [style.height]="renHeight" appWidHieRen>
+    width: {{screenWidth}}, height: {{screenHeight}}
+  </p>
+  
+</div>
+<button (click)="clickIt()" >clickme!</button>
+<hr>
+<p>{{someValue}}</p>
+<button (click)="refresh()" >refresh</button>
+
+<!-- <form #f="ngForm" ngSubmit="func(f)">
+  <div>
+    <input type="text" name="name" >
+  </div>
+  <div>
+    <input type="submit" value="Submit">
+  </div>
+</form> -->
