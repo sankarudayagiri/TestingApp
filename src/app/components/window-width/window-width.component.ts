@@ -2,6 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { HostListener } from "@angular/core";
 import { Router } from '@angular/router'
 import { NgModel } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
+// import {Http} from '@angular/http';
+
+//import * as $ from 'jquery';
 
 @Component({
   selector: 'window-width',
@@ -18,15 +22,28 @@ export class WindowWidthComponent implements OnInit {
   renHeight: any='100px';
   someValue:any;
   anyValue: any;
+  someData:any;
   anyValue2:number=0;
   someWidth:any='100';
-  constructor(public router:Router) { 
+  constructor(public router:Router, private http:HttpClient) { 
     this.onResize();
     console.log(this.renHeight);
     console.log(this.renWidth);
   }
 
   ngOnInit() {
+    this.http.get("https://jsonplaceholder.typicode.com/posts").subscribe((res) => {
+      console.log(res);
+      this.someData=res;
+    })
+    //console.log("hello");
+    // $(document).ready(function(){
+    //   $('[data-toggle="tooltip"]').tooltip();   
+    //   $('#btn1').click(function(){
+    //     alert("hello world");
+    //   });
+    // });
+
     this.someValue=false? 100: 200;
     setTimeout(() =>{
       this.someValue=400;
@@ -55,5 +72,8 @@ export class WindowWidthComponent implements OnInit {
     this.router.navigate(['new']);
     //this.ngOnInit();  
    }
+
+  
+
 
 }

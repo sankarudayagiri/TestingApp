@@ -4,10 +4,13 @@
   </p>
   
 </div>
-<button (click)="clickIt()" >clickme!</button>
+<button id="btn1"(click)="clickIt()" >clickme!</button>
 <hr>
 <p>{{someValue}}</p>
 <button (click)="refresh()" >refresh</button>
+<div class="round" style="background-color: orange;">
+  <span style="padding:0px;">GH</span>
+</div>
 
 <!-- <form #f="ngForm" ngSubmit="func(f)">
   <div>
@@ -17,3 +20,89 @@
     <input type="submit" value="Submit">
   </div>
 </form> -->
+<br>
+<br>
+
+<!-- <div id="myDIV">
+  <button class="btn" href="#head7" pageScroll [pageScrollInterruptible]="false"
+  [pageScrollDuration]="500" >1</button>
+  <button class="btn active" >2</button>
+  <button class="btn" >3</button>
+  <button class="btn" >4</button>
+  <button class="btn" >5</button>
+</div>
+<div class="scrollDiv">headding1</div>
+<div class="scrollDiv">headding2</div>
+<div class="scrollDiv">headding3</div>
+<div class="scrollDiv">headding4</div>
+<div class="scrollDiv">headding5</div>
+<div class="scrollDiv">headding6</div>
+<div class="scrollDiv" id="head7">headding7</div> -->
+
+
+
+<div class="container">
+  <h3>Tooltip Example</h3>
+  <p>The data-placement attribute specifies the tooltip position.</p>
+  <a href="#" data-toggle="tooltip" data-placement="top" title="Hooray!">Top</a>
+  <a href="#" data-toggle="tooltip" data-placement="bottom" title="Hooray!">Bottom</a>
+  <a href="#" data-toggle="tooltip" data-placement="left" title="Hooray!">Left</a>
+  <a href="#" data-toggle="tooltip" data-placement="right" title="Hooray!">Right</a>
+</div>
+
+<button type="button" class="btn btn-outline-secondary mr-2" placement="top" ngbTooltip="Tooltip on top">
+  Tooltip on top
+</button>
+<br><br>
+
+
+<div class="container">
+	<div class="row">
+		 <div class="col-md-4 col-sm-4 col-xs-12 form-group">
+		    <label class="labeltext">Do u Like Me ?</label><br>
+		    <div class="form-check-inline">
+
+					<label class="customradio"><span class="radiotextsty">Yes</span>
+					  <input type="radio" name="radio">
+					  <span class="checkmark"></span>
+					</label>        
+					<label class="customradio"><span class="radiotextsty">No</span>
+					  <input type="radio" checked="checked" name="radio">
+					  <span class="checkmark"></span>
+					</label>
+
+				</div>
+		  </div>
+	</div>
+</div><br><br><br><br>
+<br><br>
+
+<form class="example-form">
+  <mat-form-field class="example-full-width" appearance="none">
+      <mat-label style="color:black">Favorite food</mat-label>
+    <input matInput value="Sushi">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width" appearance="none">
+      <mat-label>Leave a comment</mat-label>
+    <textarea matInput ></textarea>
+  </mat-form-field>
+</form>
+<br><br><br><br>
+<br><br>
+<div class="container">
+    <form>
+        <div class="form-group">
+          <label for="firstName">First Name</label>
+          <input id="firstName" type="text" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="comment">Comment</label>
+          <textarea  id="comment" cols="30" rows="10" class="form-control"></textarea>
+          <button class="btn btn-success">Submit</button>
+        </div>
+      </form>
+</div>
+<div *ngFor="let data of someData">
+  <li>{{data.title}}</li>
+</div>

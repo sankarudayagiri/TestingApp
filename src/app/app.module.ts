@@ -1,8 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { MatInputModule } from '@angular/material/input';
+
 import { NgModule } from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 
+import {NgxPageScrollModule} from 'ngx-page-scroll';
+// import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { NewComponent } from './components/new/new.component';
@@ -41,11 +47,12 @@ const routes: Routes=[
     WindowWidthComponent,
     WidHieRenDirective,
     SignUpComponent,
-    FooComponent,
+    FooComponent
    
   ],
   imports: [
-    BrowserModule, TooltipModule.forRoot(), RouterModule.forRoot(routes)
+    HttpClientModule,
+    BrowserModule, TooltipModule.forRoot(), RouterModule.forRoot(routes),NgxPageScrollModule,BrowserAnimationsModule,MatInputModule
   ],
   providers: [SVGService],
   bootstrap: [AppComponent],
