@@ -72,6 +72,9 @@ export class WindowWidthComponent implements OnInit {
     this.router.navigate(['new']);
     //this.ngOnInit();  
    }
+   log(x){
+    console.log(x);
+   }
 
   
 

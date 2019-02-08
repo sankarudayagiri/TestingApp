@@ -10,20 +10,20 @@
     text-align: center;  
 }
 
-.btn {
+/* .btn {
     border: none;
     outline: none;
     padding: 10px 16px;
     background-color: #f1f1f1;
     cursor: pointer;
     font-size: 18px;
-  }
+  } */
   
   /* Style the active class, and buttons on mouse-over */
-  .active, .btn:hover {
+  /* .active, .btn:hover {
     background-color: #666;
     color: white;
-  }
+  } */
 
   .scrollDiv{
     height: 500px;
@@ -118,4 +118,8 @@
 .example-full-width:focus{
   color:yellow;
   border-color: yellow;
+}
+
+.form-control.ng-touched.ng-invalid{
+  border: 2px solid red;
 }

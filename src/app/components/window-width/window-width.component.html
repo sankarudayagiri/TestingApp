@@ -94,15 +94,24 @@
     <form>
         <div class="form-group">
           <label for="firstName">First Name</label>
-          <input id="firstName" type="text" class="form-control">
+          <input required minlength="3" maxlength="10" pattern="banana" ngModel name="firstName" id="firstName" #firstname="ngModel" (change)="log(firstname)" type="text" class="form-control">
+          <div class="alert alert-danger" *ngIf="firstname.touched && !firstname.valid">
+            <div *ngIf="firstname.errors.required">First name is required</div>
+            <div *ngIf="firstname.errors.minlength">First name should be minimum {{firstname.errors.minlength.requiredLength}} characters</div>
+            <div *ngIf="firstname.errors.pattern">First name doen't match pattern </div>
+          </div>
         </div>
         <div class="form-group">
           <label for="comment">Comment</label>
-          <textarea  id="comment" cols="30" rows="10" class="form-control"></textarea>
-          <button class="btn btn-success">Submit</button>
+          <textarea ngModel name="comment" id="comment" cols="30" rows="10" class="form-control"></textarea>
+          
         </div>
+        <button class="btn btn-success">Submit</button>
       </form>
-</div>
-<div *ngFor="let data of someData">
+</div> 
+
+
+<br><br>
+<!-- <div *ngFor="let data of someData">
   <li>{{data.title}}</li>
-</div>
+</div> -->

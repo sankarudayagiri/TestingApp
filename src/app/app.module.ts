@@ -22,6 +22,8 @@ import { WidHieRenDirective } from './directives/wid-hie-ren.directive';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { FooComponent } from './foo/foo.component';
 
+import { FormsModule } from '@angular/forms';
+
 
 const routes: Routes=[
   {
@@ -51,7 +53,7 @@ const routes: Routes=[
    
   ],
   imports: [
-    HttpClientModule,
+    HttpClientModule,FormsModule,
     BrowserModule, TooltipModule.forRoot(), RouterModule.forRoot(routes),NgxPageScrollModule,BrowserAnimationsModule,MatInputModule
   ],
   providers: [SVGService],
